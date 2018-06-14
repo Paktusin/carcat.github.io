@@ -2,16 +2,23 @@ import React from 'react';
 import {connect} from 'react-redux';
 import actions from "../../actions";
 import axios from "axios";
+import Brand from "./Brand";
 
 class Brands extends React.Component {
     componentDidMount() {
-        axios(actions.API_URL + 'brand/').then(res => this.props.setBrands(res));
+        axios(actions.API_URL + 'brand/').then(res => {
+            this.props.setBrands(res.data)
+        });
     }
 
     render() {
-        return this.props.brands.map(brand => <h1>{brand.name}</h1>);
+        return (
+            <div className="row">
+                {this.props.brands.map(brand => <Brand key={brand.id} brand={brand}/>)}
+            </div>
+        )
     }
-};
+}
 
 export default connect(
     (state) => ({brands: state.brands}),
