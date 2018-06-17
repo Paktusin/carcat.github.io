@@ -1,16 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from "../Card";
+import RandomImage from "../RandomImage";
 
-const Model = (props) => {
-    return (
-        <Card title={props.model.name} href={`#/model/${props.model.id}`}>
-        </Card>
-    );
+export default class Model extends React.Component {
+    render() {
+        return ('some');
+    }
 };
-
-Model.propTypes = {
-    model: PropTypes.object,
-};
-
-export default Model;
