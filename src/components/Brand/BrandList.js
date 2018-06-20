@@ -2,8 +2,9 @@ import React from 'react';
 import actions from "../../actions";
 import axios from "axios";
 import Brand from "./Brand";
+import './brandList.css'
 
-class Brands extends React.Component {
+class BrandList extends React.Component {
     state = {
         brands: []
     };
@@ -23,4 +24,4 @@ class Brands extends React.Component {
     }
 }
 
-export default Brands;
+export default BrandList;

@@ -2,12 +2,11 @@ import React from 'react';
 import actions from "../../actions";
 import axios from "axios";
 import PropTypes from 'prop-types';
-import Model from "./Model";
 import Card from "../Card";
 import RandomImage from "../RandomImage";
+import './modelList.css';
 
-
-class Models extends React.Component {
+class ModelList extends React.Component {
     state = {
         models: []
     };
@@ -29,8 +28,8 @@ class Models extends React.Component {
     }
 }
 
-Models.propTypes = {
+ModelList.propTypes = {
     brand_id: PropTypes.number
 };
 
-export default Models;
+export default ModelList;

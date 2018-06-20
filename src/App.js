@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import './App.css';
-import Brands from './components/Brand/Brands'
+import BrandList from './components/Brand/BrandList'
 import {createStore} from 'redux'
 import {Provider} from "react-redux";
 import reducer from "./reducer";
 import {HashRouter, Redirect, Route, Switch} from "react-router-dom";
-import Models from "./components/Model/Models";
+import ModelList from "./components/Model/ModelList";
 import Gens from "./components/Gen/Gens";
 
 const store = createStore(reducer);
@@ -15,11 +15,11 @@ class App extends Component {
         return (
             <Provider store={store}>
                 <HashRouter>
-                    <div className="container py-3">
+                    <div className="container-fluid">
                         <Switch>
                             <Route exact path='/model/:model_id' component={Gens}/>
-                            <Route exact path='/brand/:brand_id' component={Models}/>
-                            <Route exact path='/brand' component={Brands}/>
+                            <Route exact path='/brand/:brand_id' component={ModelList}/>
+                            <Route exact path='/brand' component={BrandList}/>
                             <Route path="*" render={() => (<Redirect to="/brand"/>)}/>
                         </Switch>
                     </div>

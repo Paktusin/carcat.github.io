@@ -1,0 +1,28 @@
+.model-list{
+    margin: 0;
+    background-color: #666;
+}
+.model-list .card {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+}
+
+.model-list .card .card-body{
+    padding: 0;
+}
+
+.model-list .card .card-title{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 30%;
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+    color:white;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1rem;
+}
