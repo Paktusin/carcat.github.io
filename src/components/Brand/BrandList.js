@@ -1,27 +1,25 @@
 import React from 'react';
-import actions from "../../actions";
-import axios from "axios";
 import Brand from "./Brand";
 import './brandList.css'
+import {connect} from "react-redux";
+import Actions from "../../actions";
 
 class BrandList extends React.Component {
-    state = {
-        brands: []
-    };
-
     componentDidMount() {
-        axios(actions.API_URL + 'brand/').then(res => {
-            this.setState({...this.state, brands: res.data})
-        });
+        Actions.getBrands();
     }
 
     render() {
         return (
             <div className="row brand-list">
-                {this.state.brands.map(brand => <Brand key={brand.id} brand={brand}/>)}
+                {this.props.brands.map(brand => <Brand key={brand.id} brand={brand}/>)}
             </div>
         )
     }
 }
 
-export default BrandList;
+export default connect(
+    (store)=>({
+      brands:store.brands
+    })
+)(BrandList);

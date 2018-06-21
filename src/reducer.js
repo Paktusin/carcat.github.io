@@ -1,11 +1,10 @@
-import actions from './actions'
+import {actions} from './actions'
 
 const initialState = {
     brands: [],
+    brand: null,
     models: [],
-    gens: [],
-    bodies: [],
-    mods: []
+    model: null
 };
 
 const reducer = (state = initialState, action) => {

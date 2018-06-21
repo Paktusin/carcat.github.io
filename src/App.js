@@ -1,14 +1,11 @@
 import React, {Component} from 'react';
 import './App.css';
 import BrandList from './components/Brand/BrandList'
-import {createStore} from 'redux'
 import {Provider} from "react-redux";
-import reducer from "./reducer";
 import {HashRouter, Redirect, Route, Switch} from "react-router-dom";
 import ModelList from "./components/Model/ModelList";
 import Gens from "./components/Gen/Gens";
-
-const store = createStore(reducer);
+import {store} from './actions';
 
 class App extends Component {
     render() {
