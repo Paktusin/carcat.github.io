@@ -1,17 +1,18 @@
-.model-list{
-    margin: 0;
+.gen .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
 }
-.model-list .card {
-    border: 0;
-    border-radius: 0;
+
+.gen .card-body{
     padding: 0;
 }
 
-.model-list .card .card-body{
-    padding: 0;
-}
-
-.model-list .card .card-title{
+.gen .card-title{
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     height: 30%;

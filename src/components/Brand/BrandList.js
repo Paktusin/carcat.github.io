@@ -19,7 +19,7 @@ class BrandList extends React.Component {
 }
 
 export default connect(
-    (store)=>({
-      brands:store.brands
+    (state) => ({
+        brands: state.brands
     })
 )(BrandList);

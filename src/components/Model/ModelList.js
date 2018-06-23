@@ -1,27 +1,26 @@
 import React from 'react';
-import actions from "../../actions";
-import axios from "axios";
 import PropTypes from 'prop-types';
 import Card from "../Card";
 import RandomImage from "../RandomImage";
 import './modelList.css';
+import Actions from "../../actions";
+import {connect} from "react-redux";
 
 class ModelList extends React.Component {
-    state = {
-        models: []
-    };
+    constructor(props) {
+        super(props);
+        this.brands_id = this.props.match.params.brand_id
+    }
 
     componentDidMount() {
-        axios(actions.API_URL + `model/?brand_id=${this.props.match.params.brand_id}`).then(res => {
-            this.setState({...this.state, models: res.data});
-        });
+        Actions.getModels(this.brands_id)
     }
 
     render() {
         return (
             <div className="row model-list">
-                {this.state.models.map(model => <Card title={model.name} href={`#/model/${model.id}`}>
-                    <RandomImage object={model}/>
+                {this.props.models.map(model => <Card key={model.id} title={model.name} href={`#/model/${model.id}`}>
+                    <RandomImage size={'m'} object={model}/>
                 </Card>)}
             </div>
         )
@@ -32,4 +31,4 @@ ModelList.propTypes = {
     brand_id: PropTypes.number
 };
 
-export default ModelList;
+export default connect((store) => ({models: store.models}))(ModelList);

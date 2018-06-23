@@ -1,32 +1,29 @@
 import React from 'react';
-import actions from "../../actions";
-import axios from "axios";
-import PropTypes from 'prop-types';
+import Actions from "../../actions";
+import {connect} from "react-redux";
+import Gen from "./Gen";
 
 
 class Gens extends React.Component {
-    state = {
-        model: null
-    };
+    model_id = this.props.match.params.model_id;
 
     componentDidMount() {
-        axios(actions.API_URL + `model/${this.props.match.params.model_id}`).then(res => {
-            this.setState({...this.state, model: res.data});
-        });
+        Actions.getModel(this.model_id);
+    }
+
+    selectBody(body_id) {
+        this.props.history.push('?body_id=' + body_id)
     }
 
     render() {
-
-        return (
-            <div className="row">
-                {this.state.model.brand.name}
-            </div>
-        )
+        return this.props.model &&
+            this.props.model.id === parseInt(this.model_id, 10) &&
+            this.props.model.gens.map(gen => <Gen
+                model_id={this.props.model.id}
+                selectBody={this.selectBody.bind(this)}
+                key={gen.id}
+                gen={gen}/>)
     }
 }
 
-Gens.propTypes = {
-    model_id: PropTypes.number
-};
-
-export default Gens;
+export default connect(store => ({model: store.model}))(Gens);
