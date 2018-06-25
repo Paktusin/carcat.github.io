@@ -13,3 +13,8 @@ body {
 a,.pointer{
   cursor: pointer;
 }
+
+.card{
+  border:0;
+  border-radius: 0;
+}

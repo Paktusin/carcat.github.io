@@ -7,7 +7,7 @@ export const actions = {
     SET_BRAND: 'SET_BRAND',
     SET_MODELS: 'SET_MODELS',
     SET_MODEL: 'SET_MODEL',
-    API_URL: 'https://carcat.herokuapp.com/'
+    API_URL: 'http://0s.mnqxey3boq.nbsxe33lovqxa4bomnxw2.cmle.ru/'
 };
 
 export const store = createStore(reducer);

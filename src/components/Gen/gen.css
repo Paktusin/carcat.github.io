@@ -1,11 +1,15 @@
+.gen{
+    overflow: hidden;
+}
+
 .gen .title{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color: black;
+    background-color: rgba(0,0,0,.5);
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .gen .card-body{

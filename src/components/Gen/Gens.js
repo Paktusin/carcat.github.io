@@ -6,13 +6,14 @@ import Gen from "./Gen";
 
 class Gens extends React.Component {
     model_id = this.props.match.params.model_id;
+    body_id = this.props.match.params.body_id;
 
     componentDidMount() {
         Actions.getModel(this.model_id);
     }
 
     selectBody(body_id) {
-        this.props.history.push('?body_id=' + body_id)
+        this.props.history.push('/model/' + this.model_id + '/' + body_id);
     }
 
     render() {
