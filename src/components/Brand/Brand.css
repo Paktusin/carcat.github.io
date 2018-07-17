@@ -1,0 +1,12 @@
+.brand{
+    color:inherit;
+    display: block;
+    transition: background-color ease-out .5s;
+}
+
+.brand:hover{
+    color: white;
+    background-color: #9699a8;
+    text-decoration: none;
+}
+

@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from "../Card";
+import './Brand.css'
 
 const Brand = (props) => {
     return (
-        <Card title={props.brand.name} href={`#/brand/${props.brand.id}`}>
-        </Card>
+        <a className="brand" href={`#/brand/${props.brand.id}`}>
+            <h1 className="p-3 text-center">{props.brand.name}</h1>
+        </a>
     );
 };
 

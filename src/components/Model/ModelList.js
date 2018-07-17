@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from "../Card";
+import Card from "../Card/Card";
 import RandomImage from "../RandomImage";
 import './modelList.css';
 import Actions from "../../actions";
@@ -15,13 +15,16 @@ class ModelList extends React.Component {
     componentDidMount() {
         Actions.getModels(this.brands_id)
     }
-
     render() {
         return (
-            <div className="row model-list">
-                {this.props.models.map(model => <Card key={model.id} title={model.name} href={`#/model/${model.id}`}>
-                    <RandomImage size={'m'} object={model}/>
-                </Card>)}
+            <div className="row model-list justify-content-center">
+                {this.props.models.map(model =>
+                    <div key={model.id}  className={"col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 p-0"}>
+                        <Card title={model.name} href={`#/model/${model.id}`}>
+                            <RandomImage size={'m'} object={model}/>
+                        </Card>
+                    </div>
+                )}
             </div>
         )
     }

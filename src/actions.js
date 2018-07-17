@@ -7,7 +7,7 @@ export const actions = {
     SET_BRAND: 'SET_BRAND',
     SET_MODELS: 'SET_MODELS',
     SET_MODEL: 'SET_MODEL',
-    API_URL: 'http://0s.mnqxey3boq.nbsxe33lovqxa4bomnxw2.cmle.ru/'
+    API_URL: 'http://82.146.59.221/'
 };
 
 export const store = createStore(reducer);

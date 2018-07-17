@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './gen.css'
-import Card from "../Card";
+import Card from "../Card/Card";
 import RandomImage from "../RandomImage";
 import BgRepeater from "../BgRepeater/BgRepeater";
 
@@ -20,7 +20,7 @@ const Gen = (props) => {
                              className={"col-12 col-sm-6 col-md-4 p-0 pointer"} onClick={props.selectBody.bind(null, body.id)}>
                             <Card
                                 title={body.name}>
-                                <RandomImage object={body.images}/>
+                                <RandomImage object={body.images} size="l"/>
                             </Card>
                         </div>
                     )}
