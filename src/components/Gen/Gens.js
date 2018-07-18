@@ -4,6 +4,7 @@ import Gen from "./Gen";
 import Aux from "../../Aux";
 import {connect} from "react-redux";
 import Body from "../Body/Body";
+import BackBtn from "../BackBtn/BackBtn";
 
 
 class Gens extends React.Component {
@@ -34,9 +35,10 @@ class Gens extends React.Component {
 
     render() {
         return (
+            this.props.model &&
             <Aux>
-                {this.props.model &&
-                this.props.model.id === parseInt(this.model_id, 10) &&
+                <BackBtn url={`#/brand/`+this.props.model.brand.id} text={this.props.model.brand.name}/>
+                {this.props.model.id === parseInt(this.model_id, 10) &&
                 this.props.model.gens.sort((a, b) => a.years < b.years ? -1 : 1).map(gen => <Gen
                     model_id={this.props.model.id}
                     selectBody={this.selectBody.bind(this)}
