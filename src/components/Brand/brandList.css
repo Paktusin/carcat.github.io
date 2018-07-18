@@ -7,7 +7,7 @@
 }
 
 .search {
-    background-color: #585a66;;
+    background-color: transparent;;
     position: fixed;
     font-size: 2.5rem;
     border: 0;
@@ -16,6 +16,9 @@
     top: 0;
     z-index: 1;
     color: #fff;
+}
+.search::placeholder{
+    color: #aaa;
 }
 
 /*.search:focus {*/

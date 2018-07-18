@@ -1,13 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=cyrillic');
 
-*{
-  font-family: 'Comfortaa', cursive;
+html{
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  html{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 756px) {
+  html{
+    font-size: 13px;
+  }
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #585a66;
+  background-color: #000731;
+  font-family: 'Comfortaa', cursive;
 }
 
 a,.pointer{

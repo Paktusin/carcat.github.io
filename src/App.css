@@ -2,10 +2,16 @@
     padding: 0;
 }
 
-.main-container{
+.main-container {
     justify-content: center;
-    justify-items: center;
     display: flex;
     min-height: 100vh;
     flex-direction: column
+}
+
+@media (max-width: 576px) {
+    .main-container {
+        justify-content: start;
+    }
+
 }
