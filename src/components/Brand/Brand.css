@@ -10,3 +10,13 @@
     text-decoration: none;
 }
 
+.logo{
+    background-color: white;
+    padding: .2rem;
+    border-radius: .5rem;
+    height: 3rem;
+    width: 3rem;
+    margin-top: -.5rem;
+    margin-left: -4rem;
+    margin-right: .5rem;
+}
