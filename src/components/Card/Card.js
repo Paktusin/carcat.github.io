@@ -9,8 +9,8 @@ const Card = (props) => {
             className: "card"
         },
         (<div className="card-body">
-            {title}
             {props.children}
+            {title}
         </div>)
     );
 };

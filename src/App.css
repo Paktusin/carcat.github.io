@@ -15,3 +15,23 @@
     }
 
 }
+
+.fader {
+    transition: all ease .5s;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.fader.in {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.opac {
+    transition: opacity ease .5s;
+    opacity: 0;
+}
+
+.opac.in {
+    opacity: 1;
+}

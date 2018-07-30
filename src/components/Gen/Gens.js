@@ -33,13 +33,23 @@ class Gens extends React.Component {
         }
     }
 
+    imageLoad(e) {
+        e.target.closest('.fader').classList.add('in');
+    }
+
+    backLoad(e) {
+        e.target.nextSibling.classList.add('in');
+    }
+
     render() {
         return (
             this.props.model &&
             <Aux>
-                <BackBtn url={`#/brand/`+this.props.model.brand.id} text={this.props.model.brand.name}/>
+                <BackBtn url={`#/brand/` + this.props.model.brand.id} text={this.props.model.brand.name}/>
                 {this.props.model.id === parseInt(this.model_id, 10) &&
                 this.props.model.gens.sort((a, b) => a.years < b.years ? -1 : 1).map(gen => <Gen
+                    imageLoad={this.imageLoad}
+                    backLoad={this.backLoad}
                     model_id={this.props.model.id}
                     selectBody={this.selectBody.bind(this)}
                     key={gen.id}

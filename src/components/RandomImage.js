@@ -1,13 +1,17 @@
 import React from 'react';
+import Aux from "../Aux";
 
 const RandomImage = (props) => {
     const size = props.size || '';
-    const src = getSrcFromObject(props.object);
+    const src = getSrcFromObject(props.object).replace('.jpg', `${size}.jpg`);
     let style = {backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '200px'};
-    if (src) style.backgroundImage = `url(${src.replace('.jpg', `${size}.jpg`)})`;
+    if (src) style.backgroundImage = `url(${src})`;
     return (
-        <div className="image img-fluid" style={style}/>
-    );
+        <Aux>
+            <img onLoad={props.imageLoad} style={{display: 'none'}} src={src} alt={'some car'}/>
+            <div className="image img-fluid" style={style}/>
+        </Aux>
+    )
 };
 
 const getSrcFromObject = (object) => {

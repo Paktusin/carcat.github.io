@@ -1,5 +1,5 @@
 import React from 'react';
-import {Modal, ModalBody, ModalHeader} from "reactstrap";
+import {Modal, ModalBody} from "reactstrap";
 import {connect} from "react-redux";
 import './Body.css'
 import axios from "axios";

@@ -8,7 +8,7 @@ import BgRepeater from "../BgRepeater/BgRepeater";
 const Gen = (props) => {
     return (
             <div className="row gen m-0 position-relative">
-                <BgRepeater image={props.gen.bodies[0].images}/>
+                <BgRepeater image={props.gen.bodies[0].images} imageLoad={props.backLoad}/>
                 <div className="col-12 col-lg-2 title">
                     <div className={"name"}>{props.gen.name}</div>
                     <div className={"years"}>{props.gen.years}</div>
@@ -17,11 +17,11 @@ const Gen = (props) => {
                     <div className={"row m-0"}>
                         {props.gen.bodies.map(body =>
                             <div key={body.id}
-                                 className={"col-12 col-sm-6 col-md-4 p-0 pointer"}
+                                 className={"col-12 col-sm-6 col-md-4 p-0 pointer fader"}
                                  onClick={props.selectBody.bind(null, body.id)}>
                                 <Card
                                     title={body.name}>
-                                    <RandomImage object={body.images} size="l"/>
+                                    <RandomImage imageLoad={props.imageLoad} object={body.images} size="l"/>
                                 </Card>
                             </div>
                         )}
