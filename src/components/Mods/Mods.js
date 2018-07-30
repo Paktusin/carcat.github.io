@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Mods = (props) => {
-    console.log(props.mods)
     return (
         <div className="table-responsive">
             <table className="table table-bordered">
