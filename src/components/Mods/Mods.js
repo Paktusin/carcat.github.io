@@ -7,8 +7,8 @@ const Mods = (props) => {
             <tr>
                 <th>Двигатель</th>
                 <th>КПП</th>
-                <th>Привод</th>
-                <th className="d-none d-sm-table-cell">Разгон до 100</th>
+                <th className="d-none d-sm-table-cell">Привод</th>
+                <th>Разгон до 100</th>
                 <th className="d-none d-sm-table-cell">Расход</th>
             </tr>
             </thead>
@@ -20,8 +20,8 @@ const Mods = (props) => {
                 <tr key={mod.id}>
                     <td>{mod.engine}</td>
                     <td>{mod.gearbox}</td>
-                    <td>{mod.drive}</td>
-                    <td className="d-none d-sm-table-cell">{mod.accel}</td>
+                    <td className="d-none d-sm-table-cell">{mod.drive}</td>
+                    <td>{mod.accel}</td>
                     <td className="d-none d-sm-table-cell">{mod.consum}</td>
                 </tr>
             )}
