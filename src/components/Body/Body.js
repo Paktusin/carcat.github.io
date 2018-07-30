@@ -33,11 +33,16 @@ class Body extends React.Component {
         return (
             <Modal toggle={this.toggle.bind(this)} isOpen={this.state.modalOpen} onClosed={this.props.onClose}
                    className="modal-lg modal-dialog-centered body-dialog">
-                <div className={"close-btn"} onClick={this.toggle.bind(this)}/>
+                {/*<div className={"close-btn"} onClick={this.toggle.bind(this)}/>*/}
                 <ModalBody>
                     <img className="img-fluid mb-3" src={body.images} alt={body.descr}/>
                     <h3>Описание:</h3>
                     <p>{body.descr}</p>
+                    <div className="justify-content-center d-flex">
+                        <button className="btn btn-secondary mb-3"
+                                onClick={this.toggle.bind(this)}>Закрыть
+                        </button>
+                    </div>
                     <h3>Характеристики:</h3>
                     {this.state.mods && <Mods mods={this.state.mods}/>}
                 </ModalBody>
