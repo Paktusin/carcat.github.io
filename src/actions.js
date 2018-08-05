@@ -10,10 +10,15 @@ export const actions = {
     API_URL: 'https://carcat.paktusin.beget.tech/'
 };
 
+const setBodyClass = (name) => {
+    document.body.className = name.toLowerCase();
+};
+
 export const store = createStore(reducer);
 
 const Actions = {
     getBrands() {
+        setBodyClass('');
         store.dispatch({type: actions.SET_BRANDS, value: []});
         axios(actions.API_URL + 'brand/').then(res => {
             store.dispatch({type: actions.SET_BRANDS, value: res.data});
@@ -22,7 +27,8 @@ const Actions = {
     getBrand(id) {
         if (store.brand && store.brand.id) return true;
         store.dispatch({type: actions.SET_BRAND, value: null});
-        axios(actions.API_URL + `brand/`, {params: {id}}).then(res => {
+        axios(actions.API_URL + `brand/${id}`).then(res => {
+            setBodyClass(res.data.name);
             store.dispatch({type: actions.SET_BRAND, value: res.data})
         });
     },
@@ -38,6 +44,7 @@ const Actions = {
         if (store.model && store.model.id === id) return true;
         else
             axios(actions.API_URL + `model/${id}`).then(res => {
+                setBodyClass(res.data.brand.name);
                 store.dispatch({type: actions.SET_MODEL, value: res.data});
                 store.dispatch({type: actions.SET_BRAND, value: res.data.brand});
             });
