@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'Audi';
+  src: url(../fonts/AudiType-ExtendedNormal.woff) format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'c';
+  src: url(../fonts/AudiType-ExtendedBold.woff) format("woff");
+  font-weight: bold;
+}
+
+$audi-red: #cc0033;
+
+body.audi {
+  background-color: white;
+  font-family: 'Audi', serif;
+
+  .card {
+    &:hover {
+      .card-title span:after {
+        background-color: white;
+        width: 100%;
+      }
+    }
+    .card-title {
+      background-color: rgba(0, 0, 0, .8);
+      span {
+        width: fit-content;
+        &:after {
+          margin: 0 auto;
+          content: "";
+          width: 0;
+          height: 2px;
+          display: block;
+          transition: width .5s ease;
+        }
+      }
+    }
+  }
+
+  .back-btn {
+    border-radius: 0;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    &:hover {
+      color: black;
+      background-color: white;
+      border-color: black;
+    }
+  }
+
+  .modal-content {
+    border-radius: 0;
+    border: 0;
+
+    .btn {
+      border-radius: 0;
+      background-color: $audi-red;
+      border-color: $audi-red;
+      &:focus,&:active{
+        background-color: $audi-red;
+        border-color: $audi-red;
+        box-shadow: none!important;
+      }
+    }
+  }
+}

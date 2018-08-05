@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import './Card.css'
 
 const Card = (props) => {
-    const title = props.title ? <div className="card-title">{props.title}</div> : null;
+    const title = props.title ? <div className="card-title"><span>{props.title}</span></div> : null;
     return React.createElement((props.href) ? 'a' : 'div', {
             href: props.href,
             className: "card"
