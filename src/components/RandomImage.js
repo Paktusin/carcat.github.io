@@ -1,5 +1,5 @@
 import React from 'react';
-import Aux from "../Aux";
+import Aux from "./Aux";
 
 const RandomImage = (props) => {
     const size = props.size || '';

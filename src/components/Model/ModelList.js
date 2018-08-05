@@ -6,7 +6,7 @@ import './modelList.css';
 import Actions from "../../actions";
 import {connect} from "react-redux";
 import BackBtn from "../BackBtn/BackBtn";
-import Aux from "../../Aux";
+import Aux from "../Aux";
 
 class ModelList extends React.Component {
     constructor(props) {

@@ -3,7 +3,7 @@ import Brand from "./Brand";
 import './brandList.css'
 import {connect} from "react-redux";
 import Actions from "../../actions";
-import Aux from "../../Aux";
+import Aux from "../Aux";
 
 class BrandList extends React.Component {
     state = {

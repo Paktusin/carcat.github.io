@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import './App.css';
-import BrandList from './components/Brand/BrandList'
+import BrandList from '../Brand/BrandList'
 import {Provider} from "react-redux";
 import {HashRouter, Redirect, Route, Switch} from "react-router-dom";
-import ModelList from "./components/Model/ModelList";
-import Gens from "./components/Gen/Gens";
-import {store} from './actions';
+import ModelList from "../Model/ModelList";
+import Gens from "../Gen/Gens";
+import {store} from '../../actions';
 
 class App extends Component {
     render() {

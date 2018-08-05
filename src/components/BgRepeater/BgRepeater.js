@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './BgRepeater.css'
-import Aux from "../../Aux";
+import Aux from "../Aux";
 
 const BgRepeater = (props) => {
     const style = {backgroundImage: `url(${props.image.replace('.jpg', 'l.jpg')})`};
