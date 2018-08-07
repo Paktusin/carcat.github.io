@@ -15,6 +15,23 @@ $bmw-gray: rgb(142, 142, 142);
 
 body.bmw {
   font-family: 'BMW', serif;
+  &:before {
+    $logo_height:115;
+    $logo_width:103;
+    content: "";
+    height: #{$logo_height}px;
+    width: #{$logo_width}px;
+    position: fixed;
+    right: 1rem;
+    top: 0rem;
+    background: url('https://www.bmw.ru/content/dam/bmw/marketRU/bmw_ru/images/id-module/_ID_logo_BMW_White.png.asset.1517960524986.png') no-repeat center;
+    background-size: cover;
+    z-index: 999;
+    @media (max-width: 756px) {
+      height: #{$logo_height/1.5}px;
+      width: #{$logo_width/1.5}px;
+    }
+  }
 
   .card {
     $border: rgba($bmw-gray, .5) 1px solid;
