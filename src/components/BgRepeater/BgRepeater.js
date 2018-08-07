@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './BgRepeater.css'
+import './BgRepeater.scss'
 import Aux from "../Aux";
 
 const BgRepeater = (props) => {
