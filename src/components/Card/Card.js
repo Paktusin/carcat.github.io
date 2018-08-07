@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './Card.css'
+import './Card.scss'
 
 const Card = (props) => {
     const title = props.title ? <div className="card-title"><span>{props.title}</span></div> : null;

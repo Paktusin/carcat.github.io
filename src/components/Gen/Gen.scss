@@ -1,32 +1,35 @@
-.gen{
-    overflow: hidden;
-}
-
-.gen .title{
+.gen {
+  overflow: hidden;
+  .title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, .5);
     color: white;
     font-size: 1.5rem;
-}
-
-.gen .card-body{
+  }
+  .card-body {
     padding: 0;
-}
-
-.gen .card-title{
+  }
+  .card-title {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     height: 30%;
     width: 100%;
     bottom: 0;
     margin: 0;
-    color:white;
+    color: white;
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 1rem;
+  }
+
+  .body-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

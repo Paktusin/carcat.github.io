@@ -4,7 +4,7 @@ import Aux from "./Aux";
 const RandomImage = (props) => {
     const size = props.size || '';
     const src = getSrcFromObject(props.object).replace('.jpg', `${size}.jpg`);
-    let style = {backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '200px'};
+    let style = {backgroundSize: 'cover', backgroundPosition: 'center'};
     if (src) style.backgroundImage = `url(${src})`;
     return (
         <Aux>
