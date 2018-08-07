@@ -38,7 +38,7 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             {
-                test: /\.(png|jpg|gif|woff)$/,
+                test: /\.(png|jpg|gif|woff|woff2)$/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -57,12 +57,12 @@ module.exports = {
             filename: "[name].[hash].css",
         }),
         new CopyWebpackPlugin([{
-            from:'public',to:path.resolve(__dirname, 'dist')
+            from: 'public', to: path.resolve(__dirname, 'dist')
         }]),
     ],
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
-        port: 3000
+        port: 4200
     }
 };

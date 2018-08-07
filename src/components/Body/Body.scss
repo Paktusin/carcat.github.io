@@ -1,12 +1,11 @@
 .body-dialog {
-    max-width: 1024px !important;
-}
+  max-width: 1024px !important;
 
-h3 {
+  h3 {
     text-align: center;
-}
+  }
 
-.close-btn {
+  .close-btn {
     font-family: serif;
     position: absolute;
     right: 10px;
@@ -23,17 +22,23 @@ h3 {
     text-align: center;
     cursor: pointer;
     transition: all ease .5s;
-}
+  }
 
-.close-btn::after{
+  .close-btn::after {
     margin-top: .3rem;
     content: "\2716";
     font-size: 16px;
-}
+  }
 
-.close-btn:hover{
+  .close-btn:hover {
     background-color: white;
     color: black;
+  }
+
+  .img-container {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 }
 
 /*.body-dialog .modal-content{*/

@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'BMW';
+  src: url(../fonts/BMWTypeWebLight.woff2) format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'BMW';
+  src: url(../fonts/BMWTypeWebBold.woff2) format("woff2");
+  font-weight: bold;
+}
+
+$bmw-blue: rgb(28, 105, 212);
+$bmw-gray: rgb(142, 142, 142);
+
+body.bmw {
+  font-family: 'BMW', serif;
+
+  .card {
+    $border: rgba($bmw-gray, .5) 1px solid;
+    background-color: white;
+    border-right: $border;
+    border-bottom: $border;
+    .card-title {
+      position: relative;
+      background-color: white;
+      font-weight: bold;
+      color: black;
+    }
+  }
+
+  .modal-content {
+    .btn {
+      border-radius: 0;
+      font-weight: bold;
+      padding: .5rem 2rem;
+      background-color: $bmw-blue;
+      border-color: $bmw-blue;
+      &:focus, &:active, &:hover {
+        background-color: $bmw-blue;
+        border-color: $bmw-blue;
+      }
+      &:focus, &:active {
+        box-shadow: 0 0 0 0.2rem rgba($bmw-blue, .25) !important;
+      }
+    }
+  }
+
+  .back-btn{
+    border-radius: 0;
+    font-weight: bold;
+    padding: .5rem 2rem;
+    background-color: $bmw-gray;
+    color: white;
+  }
+}

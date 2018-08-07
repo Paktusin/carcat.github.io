@@ -3,3 +3,7 @@
     border-radius: 0;
     background-color: transparent;
 }
+
+.card:hover{
+    text-decoration: none;
+}

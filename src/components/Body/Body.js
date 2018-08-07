@@ -1,7 +1,7 @@
 import React from 'react';
 import {Modal, ModalBody} from "reactstrap";
 import {connect} from "react-redux";
-import './Body.css'
+import './Body.scss'
 import axios from "axios";
 import Mods from "../Mods/Mods";
 
@@ -35,7 +35,9 @@ class Body extends React.Component {
                    className="modal-lg modal-dialog-centered body-dialog">
                 {/*<div className={"close-btn"} onClick={this.toggle.bind(this)}/>*/}
                 <ModalBody>
-                    <img className="img-fluid mb-3" src={body.images} alt={body.descr}/>
+                    <div className="img-container">
+                        <img className="img-fluid" src={body.images} alt={body.descr}/>
+                    </div>
                     <h3>Описание:</h3>
                     <p>{body.descr}</p>
                     <div className="justify-content-center d-flex">
