@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'MB';
+  src: url(../fonts/Daimler.woff2) format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'MB2';
+  src: url(../fonts/DaimlerCS-Regular.woff2) format("woff2");
+  font-weight: bold;
+}
+
+$mb-blue: #00adef;
+
+body.mercedes-benz {
+  font-family: 'MB2', serif;
+  .card {
+    &:hover {
+      .card-title {
+        background: #161616;
+      }
+    }
+    .card-title {
+      font-family: 'MB', serif;
+      background: linear-gradient(180deg,#333,#242424);
+      color: white;
+    }
+  }
+
+  .modal-content {
+    .btn {
+      border-radius: 0;
+      font-weight: bold;
+      padding: .3rem 2rem;
+      background-color: #3c3c3c;
+      border-color: #3c3c3c;
+      &:focus, &:active, &:hover {
+        background-color: #2a2a2a;
+        border-color: #2a2a2a;
+      }
+      &:focus, &:active {
+        box-shadow: 0 0 0 0.2rem rgba(rgb(42,42,42), .25) !important;
+      }
+    }
+  }
+
+  .back-btn {
+    border-radius: 0;
+    font-weight: bold;
+    padding: .5rem 2rem;
+    background-color: $mb-blue;
+    color: white;
+  }
+}
