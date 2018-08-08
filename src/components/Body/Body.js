@@ -38,15 +38,17 @@ class Body extends React.Component {
                     <div className="img-container">
                         <img className="img-fluid" src={body.images} alt={body.descr}/>
                     </div>
-                    <h3>Описание:</h3>
-                    <p>{body.descr}</p>
-                    <div className="justify-content-center d-flex">
-                        <button className="btn btn-secondary mb-3"
-                                onClick={this.toggle.bind(this)}>Закрыть
-                        </button>
+                    <div className="description-container">
+                        <h3>Описание:</h3>
+                        <p>{body.descr}</p>
+                        <div className="justify-content-center d-flex">
+                            <button className="btn btn-secondary mb-3"
+                                    onClick={this.toggle.bind(this)}>Закрыть
+                            </button>
+                        </div>
+                        <h3>Характеристики:</h3>
+                        {this.state.mods && <Mods mods={this.state.mods}/>}
                     </div>
-                    <h3>Характеристики:</h3>
-                    {this.state.mods && <Mods mods={this.state.mods}/>}
                 </ModalBody>
             </Modal>
         )
