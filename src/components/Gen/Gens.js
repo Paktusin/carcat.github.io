@@ -15,7 +15,9 @@ class Gens extends React.Component {
 
     componentDidMount() {
         Actions.getModel(this.model_id);
-        window.addEventListener('resize', ()=>{this.forceUpdate()});
+        window.addEventListener('resize', () => {
+            this.forceUpdate()
+        });
     }
 
     selectBody(body_id) {
@@ -43,8 +45,6 @@ class Gens extends React.Component {
     }
 
     render() {
-        let height;
-        if (this.props.model) height = (this.props.model.gens.length * 200 < window.innerHeight) ? window.innerHeight / this.props.model.gens.length : 'auto';
         return (
             this.props.model &&
             <Aux>
@@ -52,7 +52,6 @@ class Gens extends React.Component {
                 {this.props.model.id === parseInt(this.model_id, 10) &&
                 this.props.model.gens.sort((a, b) => a.years < b.years ? -1 : 1).map(gen => <Gen
                     imageLoad={this.imageLoad}
-                    height={height}
                     backLoad={this.backLoad}
                     model_id={this.props.model.id}
                     selectBody={this.selectBody.bind(this)}

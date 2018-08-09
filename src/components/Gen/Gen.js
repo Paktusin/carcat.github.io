@@ -6,9 +6,8 @@ import RandomImage from "../RandomImage";
 import BgRepeater from "../BgRepeater/BgRepeater";
 
 const Gen = (props) => {
-    const style = {height: props.height || 'auto'};
     return (
-        <div className="row gen m-0 position-relative" style={style}>
+        <div className="row gen m-0 position-relative flex-grow-1">
             <BgRepeater image={props.gen.bodies[0].images} imageLoad={props.backLoad}/>
             <div className="col-12 col-lg-2 title">
                 <div className={"name"}>{props.gen.name}</div>
