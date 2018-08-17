@@ -1,8 +1,9 @@
 import React from 'react';
+import './Mods.scss';
 
 const Mods = (props) => {
     return (
-        <table className="table table-bordered">
+        <table className="table table-bordered mods">
             <thead>
             <tr>
                 <th>Двигатель</th>

@@ -1,7 +1,7 @@
 .brand{
     color:#aaa;
     display: block;
-    transition: background-color ease-out .5s;
+    /*transition: background-color ease-out .5s;*/
 }
 
 .brand:hover{
