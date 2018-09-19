@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import './Body.scss'
 import axios from "axios";
 import Mods from "../Mods/Mods";
+import {actions} from "../../actions";
 
 class Body extends React.Component {
     state = {
