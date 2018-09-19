@@ -12,7 +12,7 @@ class Body extends React.Component {
     };
 
     componentDidMount() {
-        axios.get('https://carcat.paktusin.beget.tech/body/' + this.props.body_id).then(res => {
+        axios.get(actions.API_URL+'body/' + this.props.body_id).then(res => {
             this.setState({
                 ...this.state,
                 mods: res.data.mods
