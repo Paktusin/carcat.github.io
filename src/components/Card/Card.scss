@@ -1,0 +1,11 @@
+.card{
+    border:0;
+    border-radius: 0;
+    background-color: transparent;
+    &:hover{
+        text-decoration: none;
+    }
+    .img-fluid{
+        min-height: 200px;
+    }
+}

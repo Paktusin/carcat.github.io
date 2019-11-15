@@ -1,0 +1,50 @@
+.body-dialog {
+  max-width: 1024px !important;
+
+  h3 {
+    text-align: center;
+  }
+
+  .close-btn {
+    font-family: serif;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 99999;
+    border-radius: 50%;
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease .5s;
+  }
+
+  .close-btn::after {
+    margin-top: .3rem;
+    content: "\2716";
+    font-size: 16px;
+  }
+
+  .close-btn:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .img-container {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+/*.body-dialog .modal-content{*/
+/*border-radius: 0;*/
+/*}*/
+
+/*.body-dialog .modal-body{*/
+/*padding: 0;*/
+/*}*/
