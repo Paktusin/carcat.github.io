@@ -6,10 +6,14 @@ const app = express();
 
 app.use((req, res, next) => {
     res.set("Cache-Control", 'public, max-age=300');
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "*");
+    res.header("Access-Control-Allow-Methods", "GET");
     return next();
 });
 
 app.use("/brand", require('./src/brand'));
+app.use("/model", require('./src/model'));
 
 app.use((req, res) => {
     res.statusCode = 404;

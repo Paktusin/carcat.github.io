@@ -1,25 +1,17 @@
 const router = require('express').Router();
 const database = require('./database');
 
-function mapBrand(res) {
-    if (Array.isArray(res))
-        return res.map(el => mapBrand(el));
-    else
-        return {id: res.id, name: res.name}
-}
+router.get('/', (req, res) => {
+    database.all('brand').then(snapshot => {
+        return res.json(snapshot.val().filter(el => el))
+    })
+});
 
 router.get('/:id', (req, res) => {
-    database.ref('brand/' + req.params.id).once('value').then(snapshot => {
-        return res.json(mapBrand(snapshot.val()))
+    database.find('brand', req.params.id).then(snapshot => {
+        return res.json(snapshot.val())
     })
 });
-
-router.get('/', (req, res) => {
-    database.ref('brand/').once('value').then(snapshot => {
-        return res.json(mapBrand(snapshot.val()))
-    })
-});
-
 
 
 module.exports = router;
