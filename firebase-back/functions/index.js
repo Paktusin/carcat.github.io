@@ -1,26 +1,17 @@
-const functions = require('firebase-functions');
-const express = require('express');
-const admin = require('firebase-admin');
+const functions = require("firebase-functions");
+const express = require("express");
 
-admin.initializeApp({
-    credential: admin.credential.applicationDefault(),
-    databaseURL: "https://carcat-3a3fb.firebaseio.com"
-});
 
 const app = express();
 
 app.use((req, res, next) => {
-    res.set('Cache-Control', 'public, max-age=300');
+    res.set("Cache-Control", 'public, max-age=300');
     return next();
 });
 
-app.get('/brand', (req, res) => {
-    admin.database().ref('brand/').once('value').then(snapshot => {
-        return res.json(snapshot.val())
-    })
-});
+app.get("/brand", require('./src/brand'));
 
-app.use((req, res, next) => {
+app.use((req, res) => {
     res.statusCode = 404;
     return res.send();
 });

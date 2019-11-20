@@ -1,11 +1,11 @@
 {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
+  "name": "carcat",
+  "description": "Carat app",
   "scripts": {
-    "serve": "firebase serve --only functions,hosting",
+    "serve": "firebase serve --only functions",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
-    "deploy": "firebase deploy --only functions,hosting"
+    "deploy": "firebase deploy --only functions"
   },
   "engines": {
     "node": "8"
