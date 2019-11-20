@@ -2,7 +2,7 @@
   "hosting": {
     "rewrites": [
       {
-        "source": "/*",
+        "source": "**",
         "function": "carcat"
       }
     ]
