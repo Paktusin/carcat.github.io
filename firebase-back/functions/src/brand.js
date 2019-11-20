@@ -1,5 +1,4 @@
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
 const database = require('./database');
 
 function mapBrand(res) {
@@ -9,16 +8,18 @@ function mapBrand(res) {
         return {id: res.id, name: res.name}
 }
 
+router.get('/:id', (req, res) => {
+    database.ref('brand/' + req.params.id).once('value').then(snapshot => {
+        return res.json(mapBrand({id:1,name:'123'}))
+    })
+});
+
 router.get('/', (req, res) => {
     database.ref('brand/').once('value').then(snapshot => {
         return res.json(mapBrand(snapshot.val()))
     })
 });
 
-router.get('/:id', (req, res) => {
-    database.ref('brand/' + req.params.id).once('value').then(snapshot => {
-        return res.json(mapBrand(snapshot.val()))
-    })
-});
+
 
 module.exports = router;

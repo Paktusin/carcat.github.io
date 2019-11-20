@@ -9,7 +9,7 @@ app.use((req, res, next) => {
     return next();
 });
 
-app.get("/brand", require('./src/brand'));
+app.use("/brand", require('./src/brand'));
 
 app.use((req, res) => {
     res.statusCode = 404;
