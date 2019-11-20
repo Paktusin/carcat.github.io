@@ -4,7 +4,7 @@ const database = require('./database');
 
 function mapBrand(res) {
     if (Array.isArray(res))
-        return res.map(mapBrand);
+        return res.map(el => mapBrand(el));
     else
         return {id: res.id, name: res.name}
 }
