@@ -7,6 +7,9 @@
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions,hosting"
   },
+  "engines": {
+    "node": "8"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "firebase-admin": "^8.8.0",
