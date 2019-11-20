@@ -10,7 +10,7 @@ function mapBrand(res) {
 
 router.get('/:id', (req, res) => {
     database.ref('brand/' + req.params.id).once('value').then(snapshot => {
-        return res.json(mapBrand({id:1,name:'123'}))
+        return res.json(mapBrand(snapshot.val()))
     })
 });
 
