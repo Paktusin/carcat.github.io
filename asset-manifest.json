@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.72865900.chunk.css",
-    "main.js": "/static/js/main.49704792.chunk.js",
-    "main.js.map": "/static/js/main.49704792.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.6f415da0.js",
-    "runtime-main.js.map": "/static/js/runtime-main.6f415da0.js.map",
-    "static/js/2.9e4e2414.chunk.js": "/static/js/2.9e4e2414.chunk.js",
-    "static/js/2.9e4e2414.chunk.js.map": "/static/js/2.9e4e2414.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.6fae1cb89bdca4c718089e9113c76a42.js": "/precache-manifest.6fae1cb89bdca4c718089e9113c76a42.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.72865900.chunk.css.map": "/static/css/main.72865900.chunk.css.map",
-    "static/media/audi.scss": "/static/media/AudiType-ExtendedNormal.51107c37.woff",
-    "static/media/bmw.scss": "/static/media/BMWTypeWebLight.4a40a6a5.woff2",
-    "static/media/mercedes-benz.scss": "/static/media/DaimlerCS-Regular.f633967b.woff2"
+    "main.css": "/carcat/static/css/main.7efd2fb9.chunk.css",
+    "main.js": "/carcat/static/js/main.49704792.chunk.js",
+    "main.js.map": "/carcat/static/js/main.49704792.chunk.js.map",
+    "runtime-main.js": "/carcat/static/js/runtime-main.dc7a9058.js",
+    "runtime-main.js.map": "/carcat/static/js/runtime-main.dc7a9058.js.map",
+    "static/js/2.9e4e2414.chunk.js": "/carcat/static/js/2.9e4e2414.chunk.js",
+    "static/js/2.9e4e2414.chunk.js.map": "/carcat/static/js/2.9e4e2414.chunk.js.map",
+    "index.html": "/carcat/index.html",
+    "precache-manifest.9d9431b448341e471124572dbd737095.js": "/carcat/precache-manifest.9d9431b448341e471124572dbd737095.js",
+    "service-worker.js": "/carcat/service-worker.js",
+    "static/css/main.7efd2fb9.chunk.css.map": "/carcat/static/css/main.7efd2fb9.chunk.css.map",
+    "static/media/audi.scss": "/carcat/static/media/AudiType-ExtendedNormal.51107c37.woff",
+    "static/media/bmw.scss": "/carcat/static/media/BMWTypeWebLight.4a40a6a5.woff2",
+    "static/media/mercedes-benz.scss": "/carcat/static/media/DaimlerCS-Regular.f633967b.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.6f415da0.js",
+    "static/js/runtime-main.dc7a9058.js",
     "static/js/2.9e4e2414.chunk.js",
-    "static/css/main.72865900.chunk.css",
+    "static/css/main.7efd2fb9.chunk.css",
     "static/js/main.49704792.chunk.js"
   ]
 }
