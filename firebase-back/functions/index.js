@@ -14,6 +14,7 @@ app.use((req, res, next) => {
 
 app.use("/brand", require('./src/brand'));
 app.use("/model", require('./src/model'));
+app.use("/mods", require('./src/mods'));
 
 app.use((req, res) => {
     res.statusCode = 404;

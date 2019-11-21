@@ -7,7 +7,7 @@ export const actions = {
     SET_BRAND: 'SET_BRAND',
     SET_MODELS: 'SET_MODELS',
     SET_MODEL: 'SET_MODEL',
-    API_URL: 'http://localhost:5000'
+    API_URL: 'https://carcat-3a3fb.web.app'
 };
 
 const setBodyClass = (name) => {
