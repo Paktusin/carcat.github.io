@@ -13,10 +13,11 @@ class Body extends React.Component {
     };
 
     componentDidMount() {
-        axios.get(actions.API_URL+'body/' + this.props.body_id).then(res => {
+        const {body_id} = this.props;
+        axios.get(actions.API_URL + '/mods/', {params: {body_id}}).then(res => {
             this.setState({
                 ...this.state,
-                mods: res.data.mods
+                mods: res.data
             });
         })
     }
@@ -32,9 +33,10 @@ class Body extends React.Component {
     render() {
         const body = this.getBody();
         return (
-            <Modal toggle={this.toggle.bind(this)} isOpen={this.state.modalOpen} onClosed={this.props.onClose}
+            <Modal toggle={this.toggle.bind(this)}
+                   isOpen={this.state.modalOpen}
+                   onClosed={this.props.onClose}
                    className="modal-lg modal-dialog-centered body-dialog">
-                {/*<div className={"close-btn"} onClick={this.toggle.bind(this)}/>*/}
                 <ModalBody>
                     <div className="img-container">
                         <img className="img-fluid" src={body.images} alt={body.descr}/>

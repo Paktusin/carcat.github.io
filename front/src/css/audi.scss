@@ -12,7 +12,7 @@
 
 $audi-red: #cc0033;
 
-body.audi {
+body[brand="audi"] {
   background-color: white;
   font-family: 'Audi', serif;
 

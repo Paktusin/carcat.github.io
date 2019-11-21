@@ -27,8 +27,8 @@ class BrandList extends React.Component {
                        onChange={this.searchChange.bind(this)}/>
                 <div className="row brand-list m-0">
                     <div className="col-12 p-0">
-                        {brands.filter(brand=>brand.logo!==null).map(brand => <Brand key={brand.id} brand={brand}/>)}
-                        {brands.filter(brand=>brand.logo===null).map(brand => <Brand key={brand.id} brand={brand}/>)}
+                        {brands.filter(brand => brand.logo).map(brand => <Brand key={brand.id} brand={brand}/>)}
+                        {brands.filter(brand => !brand.logo).map(brand => <Brand key={brand.id} brand={brand}/>)}
                     </div>
                 </div>
             </Aux>

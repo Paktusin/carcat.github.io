@@ -12,14 +12,17 @@
 
 $mb-blue: #00adef;
 
-body.mercedes-benz {
+body[brand="mercedes-benz"] {
   font-family: 'MB2', serif;
+  background-color: black;
+
   .card {
     &:hover {
       .card-title {
         background: #161616;
       }
     }
+
     .card-title {
       font-family: 'MB', serif;
       background: linear-gradient(180deg, #333, #242424);
@@ -43,25 +46,31 @@ body.mercedes-benz {
       outline: 1000px solid black;
       padding: 0;
     }
+
     h3 {
       font-family: 'MB', serif;
     }
+
     .description-container {
       padding: 1rem;
     }
+
     background-color: black;
     border-radius: 0;
     color: white;
+
     .btn {
       border-radius: 0;
       font-weight: bold;
       padding: .3rem 2rem;
       background-color: #3c3c3c;
       border-color: #3c3c3c;
+
       &:focus, &:active, &:hover {
         background-color: #2a2a2a;
         border-color: #2a2a2a;
       }
+
       &:focus, &:active {
         box-shadow: 0 0 0 0.2rem rgba(rgb(42, 42, 42), .25) !important;
       }

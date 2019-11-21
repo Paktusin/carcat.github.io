@@ -13,11 +13,13 @@
 $bmw-blue: rgb(28, 105, 212);
 $bmw-gray: rgb(142, 142, 142);
 
-body.bmw {
+body[brand="bmw"] {
   font-family: 'BMW', serif;
+  background-color: white;
+
   &:before {
-    $logo_height:115;
-    $logo_width:103;
+    $logo_height: 115;
+    $logo_width: 103;
     content: "";
     height: #{$logo_height}px;
     width: #{$logo_width}px;
@@ -36,20 +38,24 @@ body.bmw {
   .card {
     $border: rgba($bmw-gray, .5) 1px solid;
     background-color: white;
+
     &:hover {
       .card-title:after {
         height: 5px;
       }
     }
+
     .card-title {
       position: relative;
       background-color: white;
       font-weight: bold;
       color: black;
       padding: 0;
+
       span {
         padding: 0 1rem 5px 1rem;
       }
+
       &:after {
         transition: all .3s ease;
         position: absolute;
@@ -70,10 +76,12 @@ body.bmw {
       padding: .5rem 2rem;
       background-color: $bmw-blue;
       border-color: $bmw-blue;
+
       &:focus, &:active, &:hover {
         background-color: $bmw-blue;
         border-color: $bmw-blue;
       }
+
       &:focus, &:active {
         box-shadow: 0 0 0 0.2rem rgba($bmw-blue, .25) !important;
       }

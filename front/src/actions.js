@@ -11,7 +11,7 @@ export const actions = {
 };
 
 const setBodyClass = (name) => {
-    document.body.className = name.toLowerCase();
+    document.body.setAttribute('brand', name.toLowerCase());
 };
 
 
@@ -26,14 +26,15 @@ const Actions = {
         })
     },
     getBrand(id) {
-        if (store.brand && store.brand.id) return true;
+        if (store.brand) return true;
         store.dispatch({type: actions.SET_BRAND, value: null});
         axios.get(actions.API_URL + '/brand/' + id).then(res => {
+            const brand = res.data;
+            setBodyClass(brand.name);
             store.dispatch({type: actions.SET_BRAND, value: res.data});
         });
     },
     getModels(brand_id) {
-        if (store.brand && store.brand.id === brand_id) return true;
         this.getBrand(brand_id);
         store.dispatch({type: actions.SET_MODELS, value: []});
         axios.get(actions.API_URL + '/model', {params: {brand_id}}).then(res => {
@@ -42,12 +43,11 @@ const Actions = {
     },
     getModel(id) {
         if (store.model && store.model.id === id) return true;
-        else
-            axios(actions.API_URL + `model/${id}`).then(res => {
-                setBodyClass(res.data.brand.name);
-                store.dispatch({type: actions.SET_MODEL, value: res.data});
-                store.dispatch({type: actions.SET_BRAND, value: res.data.brand});
-            });
+        axios.get(actions.API_URL + `/model/${id}`).then(res => {
+            const model = res.data;
+            this.getBrand(model.brand_id);
+            store.dispatch({type: actions.SET_MODEL, value: model});
+        });
     }
 };
 

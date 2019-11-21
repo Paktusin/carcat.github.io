@@ -45,23 +45,25 @@ class Gens extends React.Component {
     }
 
     render() {
+        const {brand, model} = this.props;
+
         return (
             this.props.model &&
             <Aux>
-                <BackBtn url={`#/brand/` + this.props.model.brand.id} text={this.props.model.brand.name}/>
-                {this.props.model.id === parseInt(this.model_id, 10) &&
-                this.props.model.gens.sort((a, b) => a.years < b.years ? -1 : 1).map(gen => <Gen
+                {brand && <BackBtn url={`#/brand/` + brand.id} text={brand.name}/>}
+                {model.id === parseInt(this.model_id, 10) &&
+                    model.gens.sort((a, b) => a.years < b.years ? -1 : 1).map(gen => <Gen
                     imageLoad={this.imageLoad}
                     backLoad={this.backLoad}
-                    model_id={this.props.model.id}
+                    model_id={model.id}
                     selectBody={this.selectBody.bind(this)}
                     key={gen.id}
                     gen={gen}/>)}
-                {this.props.model && this.state.body_id &&
+                {model && this.state.body_id &&
                 <Body body_id={this.state.body_id} onClose={this.closeBody.bind(this)}/>}
             </Aux>
         )
     }
 }
 
-export default connect(store => ({model: store.model}))(Gens);
+export default connect(store => ({model: store.model, brand: store.brand}))(Gens);
